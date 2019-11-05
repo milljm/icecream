@@ -650,7 +650,7 @@ static CompileServer *pick_server(Job *job)
         }
 
         // Ignore ineligible servers
-        if (!cs->is_eligible(job)) {
+        if (!cs->is_eligible_now(job)) {
             trace() << cs->nodeName() << " not eligible" << endl;
             continue;
         }
